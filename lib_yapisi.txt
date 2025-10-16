@@ -1,0 +1,23 @@
+lib/
+├── /core
+│   ├── database_helper.dart
+├── main.dart
+├── /screens
+│   ├── /credit_card
+│   │   ├── credit_card_add.dart
+│   │   ├── credit_card_detail.dart
+│   │   ├── credit_card_list.dart
+│   ├── /debt
+│   │   ├── debt_add.dart
+│   │   ├── debt_list.dart
+│   │   ├── debt_schedule.dart
+│   ├── /report
+│   │   ├── summary_report.dart
+│   ├── /transaction
+│   │   ├── expense_list.dart
+│   │   ├── income_add.dart
+│   │   ├── income_list.dart
+│   │   ├── transaction_add.dart
+│   │   ├── transaction_list.dart
+├── /widgets
+│   ├── app_drawer.dart

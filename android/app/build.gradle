@@ -1,0 +1,44 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'dev.flutter.flutter-gradle-plugin'
+}
+
+android {
+    namespace = 'com.example.mybudget'
+    compileSdk = project.hasProperty('flutter.compileSdkVersion') ? project.property('flutter.compileSdkVersion').toInteger() : 33
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_25
+        targetCompatibility JavaVersion.VERSION_25
+    }
+
+    // Configure Java toolchain for compilation
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(25)
+        }
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_25.toString()
+    }
+
+    defaultConfig {
+        applicationId = 'com.example.mybudget'
+        minSdk = project.hasProperty('flutter.minSdkVersion') ? project.property('flutter.minSdkVersion').toInteger() : 21
+        targetSdk = project.hasProperty('flutter.targetSdkVersion') ? project.property('flutter.targetSdkVersion').toInteger() : 33
+        versionCode = project.hasProperty('flutter.versionCode') ? project.property('flutter.versionCode').toInteger() : 1
+        versionName = project.hasProperty('flutter.versionName') ? project.property('flutter.versionName').toString() : '1.0'
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}

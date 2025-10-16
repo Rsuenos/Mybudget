@@ -1,0 +1,14 @@
+# Flutter & Dart
+build/
+.dart_tool/
+.flutter-plugins-dependencies
+.packages
+.idea/
+.vscode/
+*.iml
+*.apk
+*.dex
+*.ipa
+*.log
+*.tmp
+*.lock
